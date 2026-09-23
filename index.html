@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Have A School | MD Touhidul Hoque Tuhin - মানসম্মত শিক্ষার নির্ভরযোগ্য প্ল্যাটফর্ম</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'bengali': ['Hind Siliguri', 'sans-serif'],
+        'display': ['Plus Jakarta Sans', 'sans-serif'],
+      },
+      colors: {
+        royal: { 50:'#eff6ff', 100:'#dbeafe', 600:'#2563eb', 700:'#1d4ed8', 800:'#1e40af', 900:'#1e3a8a', 950:'#172554' },
+        indigo: { 600:'#4f46e5', 700:'#4338ca' }
+      }
+    }
+  }
+}
+</script>
+<style>
+*{font-family:'Hind Siliguri',sans-serif}
+.display{font-family:'Plus Jakarta Sans',sans-serif}
+.hero-gradient{background:linear-gradient(105deg, #1e3a8a 0%, #3730a3 45%, #4f46e5 100%)}
+.glass{background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.18)}
+.card-hover{transition:all .3s cubic-bezier(.4,0,.2,1)}
+.card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 40px -12px rgba(30,58,138,.25)}
+.scrollbar-hide::-webkit-scrollbar{display:none}
+.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}
+.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float{animation:float 4s ease-in-out infinite}
+</style>
+</head>
+<body class="bg-[#f8faff] text-slate-800 overflow-x-hidden">
+<!-- Top Bar -->
+<div class="bg-royal-950 text-white text-[13px] py-2 hidden md:block">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-blue-300"></i> Mirsarai, Chattogram, Bangladesh</span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-blue-300"></i> <span id="topContact">+880 1580-370062</span></span>
+      <span class="flex items-center gap-2"><i class="fa-solid fa-envelope text-blue-300"></i> tuhintouhidulhoque@gmail.com</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="opacity-80">ফলো করুন:</span>
+      <a href="https://youtube.com" target="_blank" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-600 transition"><i class="fa-brands fa-youtube text-xs"></i></a>
+      <a href="https://facebook.com" target="_blank" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+      <a href="https://tiktok.com" target="_blank" class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center hover:bg-black transition"><i class="fa-brands fa-tiktok text-xs"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-[72px]">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl hero-gradient flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+          <i class="fa-solid fa-graduation-cap text-lg"></i>
+        </div>
+        <div>
+          <h1 class="display font-extrabold text-[18px] leading-none text-royal-900">I Have A School</h1>
+          <p class="text-[11px] tracking-[0.18em] font-semibold text-indigo-600 uppercase -mt-0.5">Learn • Grow • Succeed</p>
+        </div>
+        <span class="hidden lg:inline-flex ml-3 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200 items-center gap-1.5"><span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> লাইভ ক্লাস চলছে</span>
+      </div>
+      <div class="hidden lg:flex items-center gap-7 text-[15px] font-medium">
+        <a href="#home" class="text-royal-700 font-bold border-b-2 border-royal-700 pb-1">হোম</a>
+        <a href="#posts" class="hover:text-royal-700 transition">পোস্ট & নোটস</a>
+        <a href="#courses" class="hover:text-royal-700 transition">কোর্স</a>
+        <a href="#videos" class="hover:text-royal-700 transition">ভিডিও</a>
+        <a href="#teacher" class="hover:text-royal-700 transition">শিক্ষক</a>
+        <a href="#contact" class="hover:text-royal-700 transition">যোগাযোগ</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a id="whatsappNav" href="https://wa.me/8801580370062" target="_blank" class="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#25D366] text-white font-semibold text-sm hover:bg-[#128C7E] transition shadow-md">
+          <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp
+        </a>
+        <button id="adminBtn" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full hero-gradient text-white font-semibold text-sm shadow-lg shadow-indigo-200 hover:opacity-95 transition">
+          <i class="fa-solid fa-user-shield text-xs"></i> <span id="adminBtnText">এডমিন</span>
+        </button>
+        <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t bg-white px-4 py-4 space-y-3">
+    <a href="#home" class="block py-2 font-semibold text-royal-700">হোম</a>
+    <a href="#posts" class="block py-2">পোস্ট & নোটস</a>
+    <a href="#courses" class="block py-2">কোর্সসমূহ</a>
+    <a href="#videos" class="block py-2">ভিডিও ক্লাস</a>
+    <a href="#teacher" class="block py-2">শিক্ষক পরিচিতি</a>
+    <div class="pt-3 flex gap-2">
+      <a href="https://wa.me/8801580370062" class="flex-1 py-3 rounded-full bg-[#25D366] text-white text-center font-bold"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Slider -->
+<section id="home" class="relative overflow-hidden">
+  <div id="heroSlider" class="relative h-[520px] md:h-[560px] lg:h-[620px]">
+    <!-- Slides injected by JS -->
+  </div>
+  <!-- Slider Controls -->
+  <button id="prevSlide" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center hover:bg-white transition z-20"><i class="fa-solid fa-chevron-left text-royal-900"></i></button>
+  <button id="nextSlide" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center hover:bg-white transition z-20"><i class="fa-solid fa-chevron-right text-royal-900"></i></button>
+  <div id="sliderDots" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20"></div>
+  <!-- Stats Bar -->
+  <div class="absolute -bottom-10 md:bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl bg-white rounded-[20px] shadow-[0_20px_60px_rgba(30,58,138,0.18)] border border-slate-100 p-3 md:p-4 z-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="flex items-center gap-3 p-3 rounded-2xl bg-blue-50/70">
+        <div class="w-10 h-10 rounded-xl bg-royal-700 text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-users text-sm"></i></div>
+        <div><p class="font-extrabold text-royal-900 leading-none">১৫,০০০+</p><p class="text-xs text-slate-500">সক্রিয় শিক্ষার্থী</p></div>
+      </div>
+      <div class="flex items-center gap-3 p-3 rounded-2xl bg-indigo-50/70">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-circle-play text-sm"></i></div>
+        <div><p class="font-extrabold text-royal-900 leading-none">৫০০+</p><p class="text-xs text-slate-500">ফ্রি ভিডিও ক্লাস</p></div>
+      </div>
+      <div class="flex items-center gap-3 p-3 rounded-2xl bg-amber-50/70">
+        <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-file-pdf text-sm"></i></div>
+        <div><p class="font-extrabold text-royal-900 leading-none">৩০০+</p><p class="text-xs text-slate-500">PDF নোট & সাজেশন</p></div>
+      </div>
+      <div class="flex items-center gap-3 p-3 rounded-2xl bg-emerald-50/70">
+        <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-award text-sm"></i></div>
+        <div><p class="font-extrabold text-royal-900 leading-none">৯৮%</p><p class="text-xs text-slate-500">সাফল্যের হার</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="h-16 md:h-10"></div>
+
+<!-- Search & Filter Bar -->
+<section class="max-w-7xl mx-auto px-4 mt-6">
+  <div class="bg-white rounded-[18px] border border-slate-100 shadow-sm p-4 flex flex-col lg:flex-row gap-4 items-center justify-between">
+    <div class="flex items-center gap-3 w-full lg:w-auto">
+      <div class="relative flex-1 lg:w-[360px]">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+        <input id="postSearch" type="text" placeholder="নোট, সাজেশন বা বিষয় খুঁজুন..." class="w-full pl-11 pr-4 py-3 rounded-full bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-royal-600 focus:border-transparent text-sm">
+      </div>
+      <span class="hidden md:flex items-center gap-2 text-xs font-bold text-slate-500 bg-slate-50 px-3 py-2 rounded-full border"><span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> লাইভ আপডেট</span>
+    </div>
+    <div class="flex gap-2 overflow-x-auto scrollbar-hide w-full lg:w-auto pb-1 lg:pb-0">
+      <button data-filter="all" class="filterBtn active whitespace-nowrap px-5 py-2.5 rounded-full bg-royal-700 text-white font-semibold text-sm">সকল পোস্ট</button>
+      <button data-filter="নোটস" class="filterBtn whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 hover:bg-white border border-slate-200 font-semibold text-sm">নোটস</button>
+      <button data-filter="সাজেশন" class="filterBtn whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 hover:bg-white border border-slate-200 font-semibold text-sm">সাজেশন</button>
+      <button data-filter="ভিডিও" class="filterBtn whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 hover:bg-white border border-slate-200 font-semibold text-sm">ফ্রি ক্লাস</button>
+      <button data-filter="PDF" class="filterBtn whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 hover:bg-white border border-slate-200 font-semibold text-sm">PDF</button>
+    </div>
+  </div>
+</section>
+
+<!-- Posts & PDF Section -->
+<section id="posts" class="max-w-7xl mx-auto px-4 mt-8">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+    <div>
+      <p class="text-indigo-600 font-bold text-sm tracking-widest uppercase flex items-center gap-2"><span class="w-8 h-[2px] bg-indigo-600 inline-block"></span> পড়াশোনার পোস্ট</p>
+      <h2 class="text-[28px] md:text-[34px] font-bold text-slate-900 leading-tight mt-1">নোটস, সাজেশন ও <span class="text-royal-700">PDF ডাউনলোড</span></h2>
+      <p class="text-slate-500 text-sm mt-1">নিয়মিত আপডেট — এডমিন প্যানেল থেকে সাথে সাথে লাইভ হয়</p>
+    </div>
+    <div class="flex items-center gap-2 text-sm">
+      <span class="px-3 py-1.5 rounded-full bg-white border text-slate-600 font-medium flex items-center gap-2"><i class="fa-solid fa-file-arrow-down text-royal-600"></i> PDF ডাউনলোড</span>
+      <span class="px-3 py-1.5 rounded-full bg-white border text-slate-600 font-medium hidden md:inline-flex">ফ্রি এক্সেস</span>
+    </div>
+  </div>
+  <div id="postsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- injected -->
+  </div>
+</section>
+
+<!-- Courses -->
+<section id="courses" class="max-w-7xl mx-auto px-4 mt-12">
+  <div class="rounded-[28px] hero-gradient p-6 md:p-8 text-white relative overflow-hidden">
+    <div class="absolute -right-20 -top-20 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-indigo-300/20 rounded-full blur-3xl"></div>
+    <div class="relative flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+      <div>
+        <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs font-bold tracking-widest uppercase"><i class="fa-solid fa-crown text-amber-300"></i> প্রিমিয়াম কোর্স</p>
+        <h2 class="text-[30px] md:text-[36px] font-bold leading-tight mt-3">মানসম্মত কোর্সে <span class="text-amber-200">ভর্তি চলছে</span></h2>
+        <p class="text-blue-100 mt-2 max-w-xl">HSC, SSC ও University Admission এর জন্য সাজানো গোছানো কোর্স — লাইভ ক্লাস, রেকর্ড, PDF ও মডেল টেস্ট সহ।</p>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-white text-royal-800 font-bold text-sm"><i class="fa-solid fa-phone"></i> <span class="courseContact">+880 1580-370062</span></div>
+        <span class="px-4 py-2 rounded-full bg-amber-400 text-slate-900 font-extrabold text-sm">ভর্তিতে ৩০% ছাড়!</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="coursesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+    <!-- injected -->
+  </div>
+
+  <!-- Admission Steps -->
+  <div class="grid md:grid-cols-3 gap-4 mt-6">
+    <div class="bg-white rounded-2xl border p-5 flex gap-4 items-start">
+      <div class="w-10 h-10 rounded-xl bg-blue-50 text-royal-700 flex items-center justify-center font-bold">1</div>
+      <div><h4 class="font-bold">কোর্স নির্বাচন করুন</h4><p class="text-sm text-slate-500">পছন্দের কোর্সে "ভর্তি হোন" ক্লিক করুন</p></div>
+    </div>
+    <div class="bg-white rounded-2xl border p-5 flex gap-4 items-start">
+      <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold">2</div>
+      <div><h4 class="font-bold">ফর্ম পূরণ করুন</h4><p class="text-sm text-slate-500">নাম, মোবাইল ও বিকাশ/নগদ তথ্য দিন</p></div>
+    </div>
+    <div class="bg-white rounded-2xl border p-5 flex gap-4 items-start">
+      <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">3</div>
+      <div><h4 class="font-bold">কনফার্মেশন পান</h4><p class="text-sm text-slate-500">WhatsApp এ সাথে সাথে ক্লাস লিংক পাবেন</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Player -->
+<section id="videos" class="max-w-7xl mx-auto px-4 mt-12">
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <p class="text-indigo-600 font-bold text-sm tracking-widest uppercase flex items-center gap-2"><span class="w-8 h-[2px] bg-indigo-600 inline-block"></span> ফ্রি ভিডিও ক্লাস</p>
+      <h2 class="text-[28px] md:text-[34px] font-bold text-slate-900">ভিডিও <span class="text-royal-700">প্লেয়ার</span></h2>
+    </div>
+    <a href="https://youtube.com/@ihaveaschool" target="_blank" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-600 text-white font-bold text-sm hover:bg-red-700 transition"><i class="fa-brands fa-youtube"></i> YouTube চ্যানেল</a>
+  </div>
+
+  <div class="grid lg:grid-cols-[1.7fr_0.9fr] gap-6">
+    <div class="bg-black rounded-[20px] overflow-hidden shadow-xl">
+      <div class="aspect-video relative bg-slate-900">
+        <iframe id="mainVideo" class="w-full h-full" src="https://www.youtube.com/embed/9bZkp7q19f0" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="videoOverlay" class="absolute inset-0 pointer-events-none hidden bg-gradient-to-t from-black/40 to-transparent"></div>
+      </div>
+      <div class="p-5 bg-[#0f172a] text-white">
+        <h3 id="videoTitle" class="font-bold text-lg leading-snug">HSC English 1st Paper | Completing Sentence - সহজ টেকনিক</h3>
+        <p id="videoDesc" class="text-slate-300 text-sm mt-1">MD Touhidul Hoque Tuhin স্যারের স্পেশাল ক্লাস — বেসিক থেকে এডভান্স।</p>
+        <div class="flex items-center gap-3 mt-3 text-xs">
+          <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 flex items-center gap-1.5"><i class="fa-solid fa-eye"></i> ২৪,৫০০ ভিউ</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 flex items-center gap-1.5"><i class="fa-regular fa-clock"></i> ৩২:১৫</span>
+          <button id="copyVideoLink" class="ml-auto px-3 py-1.5 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-100 transition text-xs"><i class="fa-solid fa-link mr-1"></i> লিংক কপি</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-[20px] border p-4 shadow-sm flex flex-col">
+      <div class="flex items-center justify-between mb-3">
+        <h4 class="font-bold">প্লেলিস্ট</h4>
+        <span id="videoCount" class="text-xs px-2.5 py-1 rounded-full bg-slate-100 border font-semibold">৬টি ভিডিও</span>
+      </div>
+      <div id="videoList" class="space-y-3 overflow-auto max-h-[420px] pr-1 scrollbar-hide">
+        <!-- injected -->
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+        <a href="https://youtube.com" target="_blank" class="py-2.5 rounded-xl bg-red-50 text-red-600 font-bold text-xs border border-red-100 hover:bg-red-600 hover:text-white transition"><i class="fa-brands fa-youtube block text-sm mb-1"></i> YouTube</a>
+        <a href="https://facebook.com" target="_blank" class="py-2.5 rounded-xl bg-blue-50 text-blue-600 font-bold text-xs border border-blue-100 hover:bg-blue-600 hover:text-white transition"><i class="fa-brands fa-facebook block text-sm mb-1"></i> Facebook</a>
+        <a href="https://tiktok.com" target="_blank" class="py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-black transition"><i class="fa-brands fa-tiktok block text-sm mb-1"></i> TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teacher -->
+<section id="teacher" class="max-w-7xl mx-auto px-4 mt-12">
+  <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center bg-white rounded-[28px] border shadow-sm p-6 md:p-8">
+    <div class="relative">
+      <div class="absolute -top-4 -left-4 w-24 h-24 bg-indigo-50 rounded-3xl -z-10"></div>
+      <div class="rounded-[24px] overflow-hidden hero-gradient p-[1px]">
+        <div class="rounded-[23px] overflow-hidden bg-white grid md:grid-cols-[280px_1fr]">
+          <div class="h-[340px] md:h-full bg-gradient-to-br from-blue-50 to-indigo-50 relative flex items-end justify-center overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face" alt="MD Touhidul Hoque Tuhin" class="w-full h-full object-cover">
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur rounded-2xl p-3 flex items-center gap-3 shadow-lg">
+              <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white"><i class="fa-solid fa-check text-sm"></i></div>
+              <div><p class="font-bold text-sm leading-none">ভেরিফাইড টিচার</p><p class="text-xs text-slate-500">I Have A School</p></div>
+              <span class="ml-auto text-[11px] px-2 py-1 rounded-full bg-amber-400 font-bold">4.9 ★</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-indigo-600 font-bold text-xs tracking-[0.18em] uppercase">Founder & Lead Instructor</p>
+            <h3 class="text-[26px] font-extrabold text-slate-900 leading-tight mt-1">MD Touhidul Hoque Tuhin</h3>
+            <p class="text-royal-700 font-semibold text-sm">BA (Honours) in English</p>
+            <div class="flex items-center gap-2 text-sm text-slate-600 mt-3">
+              <i class="fa-solid fa-location-dot text-royal-600"></i> Mirsarai, Chattogram, Bangladesh
+            </div>
+            <div class="h-px bg-slate-100 my-4"></div>
+            <p class="text-slate-600 text-sm leading-relaxed">ইংরেজি বিষয়ে অভিজ্ঞ ও জনপ্রিয় শিক্ষক। সহজ, গোছানো ও পরীক্ষামুখী পড়ানোর জন্য শিক্ষার্থীদের কাছে অত্যন্ত প্রিয়। “I Have A School” এর মাধ্যমে হাজারো শিক্ষার্থীকে ফ্রি নোটস, সাজেশন ও কোর্স দিয়ে সহায়তা করছেন।</p>
+            <div class="grid grid-cols-3 gap-3 mt-5">
+              <div class="text-center p-3 rounded-2xl bg-blue-50 border border-blue-100"><p class="font-extrabold text-royal-800">8+</p><p class="text-[11px] font-semibold text-slate-600">বছরের অভিজ্ঞতা</p></div>
+              <div class="text-center p-3 rounded-2xl bg-indigo-50 border border-indigo-100"><p class="font-extrabold text-indigo-700">15k+</p><p class="text-[11px] font-semibold text-slate-600">শিক্ষার্থী</p></div>
+              <div class="text-center p-3 rounded-2xl bg-amber-50 border border-amber-100"><p class="font-extrabold text-amber-700">500+</p><p class="text-[11px] font-semibold text-slate-600">ক্লাস</p></div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-5">
+              <a href="https://wa.me/8801580370062" target="_blank" class="px-5 py-2.5 rounded-full bg-[#25D366] text-white font-bold text-sm hover:bg-[#128C7E] transition"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</a>
+              <a href="tel:+8801580370062" class="px-5 py-2.5 rounded-full bg-royal-700 text-white font-bold text-sm hover:bg-royal-800 transition"><i class="fa-solid fa-phone mr-1"></i> কল করুন</a>
+              <a href="mailto:tuhintouhidulhoque@gmail.com" class="px-5 py-2.5 rounded-full bg-white border font-bold text-sm hover:bg-slate-50 transition"><i class="fa-solid fa-envelope mr-1"></i> ইমেইল</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <div class="rounded-[20px] hero-gradient text-white p-6 relative overflow-hidden">
+        <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+        <h4 class="font-bold text-lg relative">কেন “I Have A School” সেরা?</h4>
+        <ul class="mt-4 space-y-3 text-sm relative">
+          <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center shrink-0"><i class="fa-solid fa-check text-xs"></i></span> নিয়মিত ফ্রি নোটস, সাজেশন ও PDF</li>
+          <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center shrink-0"><i class="fa-solid fa-check text-xs"></i></span> লাইভ + রেকর্ড ক্লাস, যেকোনো সময় দেখার সুযোগ</li>
+          <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center shrink-0"><i class="fa-solid fa-check text-xs"></i></span> পরীক্ষামুখী সাজেশন ও মডেল টেস্ট</li>
+          <li class="flex gap-3"><span class="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center shrink-0"><i class="fa-solid fa-check text-xs"></i></span> সরাসরি WhatsApp সাপোর্ট</li>
+        </ul>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 flex gap-4">
+        <div class="w-12 h-12 rounded-xl bg-amber-400 flex items-center justify-center text-white shrink-0"><i class="fa-solid fa-quote-left"></i></div>
+        <div><p class="text-sm font-medium text-slate-700 leading-relaxed">“শিক্ষা সবার জন্য সহজ ও আনন্দময় হোক — এটাই আমার লক্ষ্য।”</p><p class="text-xs font-bold text-slate-500 mt-1">— MD Touhidul Hoque Tuhin</p></div>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <a href="https://youtube.com" target="_blank" class="bg-white border rounded-2xl p-4 text-center hover:shadow-md transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-red-50 text-red-600 flex items-center justify-center"><i class="fa-brands fa-youtube"></i></div>
+          <p class="text-xs font-bold mt-2">YouTube</p><p class="text-[11px] text-slate-500">I Have A School</p>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="bg-white border rounded-2xl p-4 text-center hover:shadow-md transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-blue-50 text-blue-600 flex items-center justify-center"><i class="fa-brands fa-facebook-f"></i></div>
+          <p class="text-xs font-bold mt-2">Facebook</p><p class="text-[11px] text-slate-500">Facebook Page</p>
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="bg-white border rounded-2xl p-4 text-center hover:shadow-md transition">
+          <div class="w-10 h-10 mx-auto rounded-full bg-slate-900 text-white flex items-center justify-center"><i class="fa-brands fa-tiktok"></i></div>
+          <p class="text-xs font-bold mt-2">TikTok</p><p class="text-[11px] text-slate-500">TikTok Profile</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section id="contact" class="max-w-7xl mx-auto px-4 mt-12">
+  <div class="rounded-[24px] bg-white border shadow-sm p-6 md:p-8 flex flex-col lg:flex-row gap-8 items-center">
+    <div class="flex-1">
+      <h3 class="text-2xl font-bold">যেকোনো প্রয়োজনে <span class="text-royal-700">যোগাযোগ করুন</span></h3>
+      <p class="text-slate-500 text-sm mt-1">কোর্স, নোটস বা ভর্তি সংক্রান্ত তথ্যের জন্য সরাসরি কল বা WhatsApp করুন।</p>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5">
+        <div class="flex items-center gap-3 p-3 rounded-2xl bg-slate-50 border">
+          <div class="w-10 h-10 rounded-xl hero-gradient text-white flex items-center justify-center"><i class="fa-solid fa-phone text-sm"></i></div>
+          <div><p class="text-xs font-bold text-slate-500 uppercase tracking-widest">কল / WhatsApp</p><p class="font-bold contactNumber">+880 1580-370062</p></div>
+        </div>
+        <div class="flex items-center gap-3 p-3 rounded-2xl bg-slate-50 border">
+          <div class="w-10 h-10 rounded-xl bg-white border flex items-center justify-center text-royal-700"><i class="fa-solid fa-envelope text-sm"></i></div>
+          <div><p class="text-xs font-bold text-slate-500 uppercase tracking-widest">ইমেইল</p><p class="font-bold text-sm">tuhintouhidulhoque@gmail.com</p></div>
+        </div>
+      </div>
+    </div>
+    <form id="contactForm" class="flex-1 w-full bg-slate-50 rounded-[20px] p-5 border">
+      <div class="grid sm:grid-cols-2 gap-3">
+        <input required placeholder="আপনার নাম" class="px-4 py-3 rounded-xl border bg-white focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+        <input required placeholder="মোবাইল নম্বর" class="px-4 py-3 rounded-xl border bg-white focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+      </div>
+      <input placeholder="বিষয় (যেমন: HSC English কোর্স)" class="w-full mt-3 px-4 py-3 rounded-xl border bg-white focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+      <textarea rows="3" placeholder="আপনার বার্তা লিখুন..." class="w-full mt-3 px-4 py-3 rounded-xl border bg-white focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm"></textarea>
+      <button type="submit" class="w-full mt-3 py-3 rounded-xl hero-gradient text-white font-bold hover:opacity-95 transition">বার্তা পাঠান <i class="fa-solid fa-paper-plane ml-2 text-xs"></i></button>
+      <p class="text-center text-xs text-slate-500 mt-2">উত্তর পাবেন WhatsApp / কলে, ২৪ ঘণ্টার মধ্যে</p>
+    </form>
+  </div>
+</section>
+
+<footer class="mt-12 bg-royal-950 text-blue-100">
+  <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
+    <div>
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-white text-royal-900 flex items-center justify-center"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div><p class="font-extrabold text-white display">I Have A School</p><p class="text-xs tracking-widest opacity-70">LEARN • GROW • SUCCEED</p></div>
+      </div>
+      <p class="text-sm text-blue-200/80 mt-4 leading-relaxed">নিয়মিত পড়াশোনার পোস্ট, নোটস, ফ্রি ভিডিও ক্লাস, সাজেশন এবং মানসম্মত কোর্স — সব এক জায়গায়।</p>
+    </div>
+    <div>
+      <h4 class="font-bold text-white mb-3">লিংক</h4>
+      <ul class="space-y-2 text-sm text-blue-200/90">
+        <li><a href="#posts" class="hover:text-white">পোস্ট & PDF</a></li>
+        <li><a href="#courses" class="hover:text-white">কোর্স সমূহ</a></li>
+        <li><a href="#videos" class="hover:text-white">ভিডিও ক্লাস</a></li>
+        <li><a href="#teacher" class="hover:text-white">শিক্ষক পরিচিতি</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-white mb-3">সোশ্যাল</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="https://youtube.com" target="_blank" class="hover:text-white flex items-center gap-2"><i class="fa-brands fa-youtube text-red-400"></i> YouTube - I Have A School</a></li>
+        <li><a href="https://facebook.com" target="_blank" class="hover:text-white flex items-center gap-2"><i class="fa-brands fa-facebook text-blue-400"></i> Facebook Page</a></li>
+        <li><a href="https://tiktok.com" target="_blank" class="hover:text-white flex items-center gap-2"><i class="fa-brands fa-tiktok"></i> TikTok Profile</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold text-white mb-3">যোগাযোগ</h4>
+      <p class="text-sm">Mirsarai, Chattogram, Bangladesh</p>
+      <p class="text-sm mt-1 contactNumber">+880 1580-370062</p>
+      <p class="text-sm">tuhintouhidulhoque@gmail.com</p>
+      <div class="flex gap-2 mt-4">
+        <a href="https://wa.me/8801580370062" target="_blank" class="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center text-white"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:+8801580370062" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-solid fa-phone text-sm"></i></a>
+        <a href="mailto:tuhintouhidulhoque@gmail.com" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-solid fa-envelope text-sm"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-4 text-center text-xs text-blue-300">© 2025 I Have A School — MD Touhidul Hoque Tuhin. সর্বস্বত্ব সংরক্ষিত।</div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a id="floatingWA" href="https://wa.me/8801580370062" target="_blank" class="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_12px_30px_rgba(37,211,102,0.5)] hover:scale-105 transition float">
+  <i class="fa-brands fa-whatsapp text-[28px]"></i>
+  <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white flex items-center justify-center text-[10px] font-bold">1</span>
+</a>
+
+<!-- Admin Login Modal -->
+<div id="loginModal" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" id="loginBackdrop"></div>
+  <div class="relative max-w-md mx-auto mt-[6vh] bg-white rounded-[24px] shadow-2xl overflow-hidden mx-4">
+    <div class="hero-gradient p-6 text-white text-center relative">
+      <button id="closeLogin" class="absolute right-4 top-4 w-8 h-8 rounded-full bg-white/15 flex items-center justify-center hover:bg-white/25 transition"><i class="fa-solid fa-xmark text-sm"></i></button>
+      <div class="w-14 h-14 mx-auto rounded-2xl bg-white text-royal-800 flex items-center justify-center text-xl shadow-lg"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3 class="font-extrabold text-xl mt-3">এডমিন লগইন</h3>
+      <p class="text-blue-100 text-sm">I Have A School — কন্ট্রোল প্যানেল</p>
+    </div>
+    <form id="loginForm" class="p-6 space-y-4">
+      <div>
+        <label class="text-sm font-bold text-slate-700">এডমিন ইমেইল</label>
+        <div class="relative mt-1">
+          <i class="fa-solid fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+          <input id="loginEmail" type="email" required placeholder="tuhintouhidulhoque@gmail.com" class="w-full pl-10 pr-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+        </div>
+      </div>
+      <div>
+        <label class="text-sm font-bold text-slate-700">পাসওয়ার্ড</label>
+        <div class="relative mt-1">
+          <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+          <input id="loginPass" type="password" required placeholder="••••••••" class="w-full pl-10 pr-10 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+          <button type="button" id="togglePass" class="absolute right-3 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-500"><i class="fa-regular fa-eye text-sm"></i></button>
+        </div>
+        <p class="text-xs text-slate-500 mt-2 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">ডেমো: <b>tuhintouhidulhoque@gmail.com</b> / <b>13837901SKTTS</b></p>
+      </div>
+      <button type="submit" class="w-full py-3 rounded-xl hero-gradient text-white font-bold shadow-lg shadow-indigo-200 hover:opacity-95 transition">লগইন করুন <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></button>
+      <p id="loginError" class="hidden text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-3 py-2 text-center"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Admin Dashboard -->
+<div id="adminDashboard" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" id="adminBackdrop"></div>
+  <div class="relative w-full h-full md:h-[92vh] md:max-w-[1180px] md:mx-auto md:mt-[4vh] bg-[#f8faff] md:rounded-[24px] shadow-2xl overflow-hidden flex flex-col">
+    <!-- Admin Header -->
+    <div class="hero-gradient p-4 md:p-5 text-white flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-white text-royal-800 flex items-center justify-center"><i class="fa-solid fa-gauge-high"></i></div>
+        <div><p class="font-extrabold leading-none">এডমিন প্যানেল</p><p class="text-xs text-blue-100">লাইভ এডিট — পরিবর্তন সাথে সাথে ইউজারের ব্রাউজারে দেখাবে</p></div>
+        <span class="hidden md:inline-flex ml-3 px-2.5 py-1 rounded-full bg-emerald-400 text-slate-900 text-xs font-extrabold items-center gap-1.5"><span class="w-2 h-2 bg-white rounded-full animate-pulse"></span> LIVE</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="hidden md:inline text-xs bg-white/15 px-3 py-1.5 rounded-full border border-white/20">tuhintouhidulhoque@gmail.com</span>
+        <button id="adminLogout" class="px-4 py-2 rounded-full bg-white text-royal-800 font-bold text-sm hover:bg-slate-100 transition">লগআউট <i class="fa-solid fa-right-from-bracket ml-1 text-xs"></i></button>
+        <button id="closeAdmin" class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center hover:bg-white/25 transition"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+
+    <div class="flex flex-1 overflow-hidden flex-col md:flex-row">
+      <!-- Sidebar -->
+      <div class="w-full md:w-[240px] bg-white border-r md:overflow-auto flex md:flex-col gap-1 p-2 shrink-0 overflow-x-auto scrollbar-hide">
+        <button data-tab="dashboard" class="adminTab active flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-royal-700 text-white font-semibold text-sm whitespace-nowrap"><i class="fa-solid fa-chart-line text-xs"></i> ড্যাশবোর্ড</button>
+        <button data-tab="hero" class="adminTab flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-slate-50 font-semibold text-sm whitespace-nowrap"><i class="fa-regular fa-images text-xs"></i> হিরো স্লাইডার</button>
+        <button data-tab="posts" class="adminTab flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-slate-50 font-semibold text-sm whitespace-nowrap"><i class="fa-solid fa-file-lines text-xs"></i> পোস্ট & PDF</button>
+        <button data-tab="courses" class="adminTab flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-slate-50 font-semibold text-sm whitespace-nowrap"><i class="fa-solid fa-book-open text-xs"></i> কোর্স</button>
+        <button data-tab="videos" class="adminTab flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-slate-50 font-semibold text-sm whitespace-nowrap"><i class="fa-solid fa-circle-play text-xs"></i> ভিডিও</button>
+        <button data-tab="settings" class="adminTab flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-slate-50 font-semibold text-sm whitespace-nowrap"><i class="fa-solid fa-gear text-xs"></i> সেটিংস</button>
+        <div class="hidden md:block mt-4 p-3 rounded-2xl bg-amber-50 border border-amber-200">
+          <p class="text-xs font-bold text-amber-800">টিপস</p>
+          <p class="text-xs text-amber-700 mt-1 leading-relaxed">যেকোনো চেঞ্জ করার পর <b>সেভ করুন</b> — সাথে সাথে সাইট আপডেট হবে (localStorage + Live DOM)।</p>
+        </div>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 overflow-auto p-4 md:p-6 bg-[#f8faff]">
+        <!-- Dashboard Tab -->
+        <div id="tab-dashboard" class="adminTabContent space-y-4">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white rounded-2xl border p-4"><p class="text-xs font-bold text-slate-500 uppercase">মোট পোস্ট</p><p id="statPosts" class="text-2xl font-extrabold text-royal-800 mt-1">6</p><p class="text-xs text-emerald-600 font-semibold mt-1">● লাইভ</p></div>
+            <div class="bg-white rounded-2xl border p-4"><p class="text-xs font-bold text-slate-500 uppercase">মোট কোর্স</p><p id="statCourses" class="text-2xl font-extrabold text-indigo-700 mt-1">3</p><p class="text-xs text-slate-500 mt-1">এডিটেবল ফি</p></div>
+            <div class="bg-white rounded-2xl border p-4"><p class="text-xs font-bold text-slate-500 uppercase">ভিডিও</p><p id="statVideos" class="text-2xl font-extrabold text-slate-800 mt-1">6</p><p class="text-xs text-slate-500 mt-1">YouTube লিংক</p></div>
+            <div class="bg-white rounded-2xl border p-4"><p class="text-xs font-bold text-slate-500 uppercase">WhatsApp</p><p class="text-sm font-extrabold text-emerald-700 mt-1 contactNumber">+880 1580-370062</p><p class="text-xs text-slate-500 mt-1">ফ্লোটিং বাটন</p></div>
+          </div>
+          <div class="bg-white rounded-2xl border p-5">
+            <h4 class="font-bold">দ্রুত অ্যাকশন</h4>
+            <div class="grid sm:grid-cols-3 gap-3 mt-4">
+              <button onclick="switchAdminTab('posts')" class="p-4 rounded-2xl border-2 border-dashed hover:border-royal-300 hover:bg-blue-50 transition text-left"><i class="fa-solid fa-plus w-8 h-8 rounded-full bg-royal-700 text-white inline-flex items-center justify-center text-xs"></i><p class="font-bold mt-2 text-sm">নতুন পোস্ট যোগ করুন</p><p class="text-xs text-slate-500">PDF লিংক সহ</p></button>
+              <button onclick="switchAdminTab('hero')" class="p-4 rounded-2xl border-2 border-dashed hover:border-indigo-300 hover:bg-indigo-50 transition text-left"><i class="fa-solid fa-images w-8 h-8 rounded-full bg-indigo-600 text-white inline-flex items-center justify-center text-xs"></i><p class="font-bold mt-2 text-sm">হিরো স্লাইডার এডিট</p><p class="text-xs text-slate-500">ছবি / লেখা বদলান</p></button>
+              <button onclick="switchAdminTab('courses')" class="p-4 rounded-2xl border-2 border-dashed hover:border-amber-300 hover:bg-amber-50 transition text-left"><i class="fa-solid fa-tag w-8 h-8 rounded-full bg-amber-500 text-white inline-flex items-center justify-center text-xs"></i><p class="font-bold mt-2 text-sm">কোর্স ফি আপডেট</p><p class="text-xs text-slate-500">দাম ও বিবরণ</p></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Tab -->
+        <div id="tab-hero" class="adminTabContent hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">হিরো স্লাইডার ম্যানেজমেন্ট</h3>
+            <button id="addSlideBtn" class="px-4 py-2 rounded-full bg-royal-700 text-white font-bold text-sm"><i class="fa-solid fa-plus mr-1"></i> নতুন স্লাইড</button>
+          </div>
+          <div id="adminHeroList" class="space-y-4"></div>
+        </div>
+
+        <!-- Posts Tab -->
+        <div id="tab-posts" class="adminTabContent hidden space-y-4">
+          <div class="bg-white rounded-2xl border p-5">
+            <h3 class="font-bold">নতুন / এডিট পোস্ট</h3>
+            <form id="postForm" class="grid md:grid-cols-2 gap-3 mt-4">
+              <input type="hidden" id="postId">
+              <input id="postTitle" required placeholder="পোস্ট টাইটেল (বাংলা)" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="postCategory" required placeholder="ক্যাটাগরি: নোটস / সাজেশন / ভিডিও / PDF" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="postSubject" placeholder="বিষয়: English / Bangla" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="postClass" placeholder="ক্লাস: HSC / SSC" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="postImage" placeholder="ছবির URL (https://...)" class="md:col-span-2 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="postPdf" placeholder="PDF ডাউনলোড লিংক (https://...)" class="md:col-span-2 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <textarea id="postDesc" rows="2" placeholder="ছোট বিবরণ" class="md:col-span-2 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm"></textarea>
+              <div class="md:col-span-2 flex gap-2">
+                <button type="submit" class="flex-1 py-3 rounded-xl hero-gradient text-white font-bold">সংরক্ষণ করুন (লাইভ)</button>
+                <button type="button" id="postReset" class="px-6 py-3 rounded-xl bg-white border font-bold">রিসেট</button>
+              </div>
+            </form>
+          </div>
+          <div class="bg-white rounded-2xl border overflow-hidden">
+            <div class="p-4 border-b flex items-center justify-between"><h4 class="font-bold">সকল পোস্ট</h4><span id="adminPostCount" class="text-xs px-2.5 py-1 rounded-full bg-slate-100 border font-bold">0</span></div>
+            <div id="adminPostList" class="divide-y max-h-[360px] overflow-auto"></div>
+          </div>
+        </div>
+
+        <!-- Courses Tab -->
+        <div id="tab-courses" class="adminTabContent hidden space-y-4">
+          <div class="bg-white rounded-2xl border p-5">
+            <h3 class="font-bold">নতুন / এডিট কোর্স</h3>
+            <form id="courseForm" class="grid md:grid-cols-2 gap-3 mt-4">
+              <input type="hidden" id="courseId">
+              <input id="courseTitle" required placeholder="কোর্স নাম" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="coursePrice" required type="number" placeholder="ফি (৳)" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="courseOldPrice" type="number" placeholder="পুরাতন ফি (ঐচ্ছিক)" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="courseDuration" placeholder="মেয়াদ: 3 মাস / 6 মাস" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="courseImage" placeholder="ছবির URL" class="md:col-span-2 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="courseFeatures" placeholder="ফিচার (কমা দিয়ে): লাইভ ক্লাস, PDF, মডেল টেস্ট" class="md:col-span-2 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <textarea id="courseDesc" rows="2" placeholder="কোর্স বিবরণ" class="md:col-span-2 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm"></textarea>
+              <div class="md:col-span-2 flex gap-2">
+                <button type="submit" class="flex-1 py-3 rounded-xl hero-gradient text-white font-bold">কোর্স সেভ (লাইভ)</button>
+                <button type="button" id="courseReset" class="px-6 py-3 rounded-xl bg-white border font-bold">রিসেট</button>
+              </div>
+            </form>
+          </div>
+          <div id="adminCourseList" class="grid md:grid-cols-2 gap-4"></div>
+        </div>
+
+        <!-- Videos Tab -->
+        <div id="tab-videos" class="adminTabContent hidden space-y-4">
+          <div class="bg-white rounded-2xl border p-5">
+            <h3 class="font-bold">ভিডিও যোগ / এডিট</h3>
+            <form id="videoForm" class="grid md:grid-cols-2 gap-3 mt-4">
+              <input type="hidden" id="videoId">
+              <input id="videoTitleInput" required placeholder="ভিডিও টাইটেল" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="videoYoutube" required placeholder="YouTube ID বা Link (যেমন: 9bZkp7q19f0)" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="videoDuration" placeholder="সময়: 32:15" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="videoViews" placeholder="ভিউ: 24,500" class="px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <input id="videoThumb" placeholder="থাম্বনেইল URL (ঐচ্ছিক)" class="md:col-span-2 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+              <div class="md:col-span-2 flex gap-2">
+                <button type="submit" class="flex-1 py-3 rounded-xl hero-gradient text-white font-bold">ভিডিও সেভ (লাইভ)</button>
+                <button type="button" id="videoReset" class="px-6 py-3 rounded-xl bg-white border font-bold">রিসেট</button>
+              </div>
+            </form>
+          </div>
+          <div id="adminVideoList" class="space-y-3"></div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div id="tab-settings" class="adminTabContent hidden space-y-4">
+          <div class="bg-white rounded-2xl border p-5">
+            <h3 class="font-bold text-lg">সেটিংস — যোগাযোগ ও ব্র্যান্ড</h3>
+            <div class="grid md:grid-cols-2 gap-4 mt-5">
+              <div>
+                <label class="text-sm font-bold">WhatsApp / ফোন নম্বর</label>
+                <input id="settingPhone" class="w-full mt-1 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm" placeholder="+880 1580-370062">
+              </div>
+              <div>
+                <label class="text-sm font-bold">এডমিন ইমেইল (ডিসপ্লে)</label>
+                <input id="settingEmail" class="w-full mt-1 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm" placeholder="tuhintouhidulhoque@gmail.com">
+              </div>
+              <div class="md:col-span-2">
+                <label class="text-sm font-bold">YouTube চ্যানেল লিংক</label>
+                <input id="settingYoutube" class="w-full mt-1 px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm" placeholder="https://youtube.com/@ihaveaschool">
+              </div>
+            </div>
+            <button id="saveSettings" class="mt-4 w-full md:w-auto px-8 py-3 rounded-xl hero-gradient text-white font-bold">সেটিংস সেভ (লাইভ)</button>
+            <div class="mt-6 p-4 rounded-2xl bg-red-50 border border-red-200">
+              <h4 class="font-bold text-red-700 text-sm">ডেঞ্জার জোন</h4>
+              <p class="text-xs text-red-600 mt-1">সব ডেটা রিসেট করে ডিফল্টে ফিরে যাবে।</p>
+              <button id="resetAll" class="mt-3 px-5 py-2 rounded-full bg-red-600 text-white font-bold text-sm hover:bg-red-700 transition">সব রিসেট করুন</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Enroll Modal -->
+<div id="enrollModal" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" id="enrollBackdrop"></div>
+  <div class="relative max-w-lg mx-auto mt-[6vh] bg-white rounded-[24px] shadow-2xl overflow-hidden mx-4">
+    <div class="p-6">
+      <div class="flex justify-between items-start">
+        <div><p class="text-xs font-bold tracking-widest text-indigo-600 uppercase">ভর্তি ফর্ম</p><h3 id="enrollTitle" class="text-xl font-extrabold">HSC English Special Course</h3><p id="enrollPrice" class="text-royal-700 font-bold">৳ 1,500</p></div>
+        <button id="closeEnroll" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form id="enrollForm" class="space-y-3 mt-5">
+        <input required placeholder="আপনার নাম" class="w-full px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+        <input required placeholder="মোবাইল নম্বর" class="w-full px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+        <select class="w-full px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+          <option>বিকাশ</option><option>নগদ</option><option>রকেট</option><option>ক্যাশ</option>
+        </select>
+        <input placeholder="ট্রানজেকশন ID (ঐচ্ছিক)" class="w-full px-4 py-3 rounded-xl border bg-slate-50 focus:outline-none focus:ring-2 focus:ring-royal-600 text-sm">
+        <button type="submit" class="w-full py-3 rounded-xl hero-gradient text-white font-bold">ভর্তি কনফার্ম করুন <i class="fa-brands fa-whatsapp ml-2"></i></button>
+        <p class="text-xs text-center text-slate-500">সাবমিট করলে WhatsApp এ কনফার্মেশন যাবে</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] hidden">
+  <div class="px-5 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold shadow-xl flex items-center gap-2"><i class="fa-solid fa-check bg-emerald-500 w-6 h-6 rounded-full flex items-center justify-center text-xs"></i> <span id="toastMsg">সফলভাবে সেভ হয়েছে!</span></div>
+</div>
+
+<script>
+const defaultState = {
+  contact: "+880 1580-370062",
+  email: "tuhintouhidulhoque@gmail.com",
+  youtube: "https://youtube.com/@ihaveaschool",
+  heroSlides: [
+    {id:1, badge:"HSC • SSC • Admission", title:"ইংরেজিতে ভালো করার", highlight:"সহজ ও স্মার্ট", desc:"MD Touhidul Hoque Tuhin স্যারের মানসম্মত নোটস, সাজেশন ও ফ্রি ভিডিও ক্লাস — সব এক জায়গায়। নিয়মিত আপডেট, পরীক্ষামুখী প্রস্তুতি।", cta:"ফ্রি ক্লাস দেখুন", cta2:"নোটস ডাউনলোড", image:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=700&fit=crop"},
+    {id:2, badge:"নতুন ব্যাচ • ভর্তি চলছে", title:"HSC English Special", highlight:"ক্র্যাশ কোর্স", desc:"গ্রামার, রাইটিং ও সাজেশন — লাইভ ক্লাস + রেকর্ড + PDF + মডেল টেস্ট। সীমিত আসনে ৩০% ছাড়!", cta:"এখনই ভর্তি হোন", cta2:"সিলেবাস দেখুন", image:"https://images.unsplash.com/photo-1513258496099-48168024aec0?w=1200&h=700&fit=crop"},
+    {id:3, badge:"PDF • সাজেশন", title:"পরীক্ষার আগে", highlight:"শেষ মুহূর্তের প্রস্তুতি", desc:"বাছাই করা সাজেশন ও হ্যান্ডনোট PDF — ডাউনলোড করে অফলাইনেও পড়ুন। প্রতিদিন নতুন পোস্ট।", cta:"PDF ডাউনলোড", cta2:"সকল পোস্ট", image:"https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&h=700&fit=crop"}
+  ],
+  posts: [
+    {id:1, title:"HSC English 2nd Paper - Completing Sentence (100 Rules)", category:"নোটস", subject:"English", class:"HSC", desc:"বোর্ড প্রশ্ন বিশ্লেষণ করে ১০০টি গুরুত্বপূর্ণ রুলস — উদাহরণ সহ।", image:"https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop", pdf:"https://example.com/pdf1.pdf", date:"১২ সেপ্টে, ২০২৫", views:"12.4k"},
+    {id:2, title:"SSC English Suggestion 2026 - Seen & Unseen Passage", category:"সাজেশন", subject:"English", class:"SSC", desc:"শেষ মুহূর্তের ১০০% কমন উপযোগী সাজেশন — Seen, Unseen, Writing Part", image:"https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=600&h=400&fit=crop", pdf:"https://example.com/pdf2.pdf", date:"১০ সেপ্টে, ২০২৫", views:"9.8k"},
+    {id:3, title:"Right Form of Verb - Easy Technique (Free Class Note)", category:"PDF", subject:"Grammar", class:"HSC", desc:"মুখস্থ নয়, টেকনিক দিয়ে শিখুন — চার্ট ও টেবিল সহ PDF", image:"https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop", pdf:"https://example.com/pdf3.pdf", date:"০৮ সেপ্টে, ২০২৫", views:"15.2k"},
+    {id:4, title:"Paragraph Writing - Format & 15 Most Important", category:"নোটস", subject:"Writing", class:"HSC-SSC", desc:"যেকোনো Paragraph লেখার ফরম্যাট + গুরুত্বপূর্ণ ১৫টি", image:"https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=600&h=400&fit=crop", pdf:"https://example.com/pdf4.pdf", date:"০৫ সেপ্টে, ২০২৫", views:"7.1k"},
+    {id:5, title:"HSC 2025 Final Suggestion - English 1st Paper", category:"সাজেশন", subject:"English", class:"HSC", desc:"1st Paper এর জন্য চূড়ান্ত সাজেশন — Passage, With Clues, Rearrange", image:"https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600&h=400&fit=crop", pdf:"https://example.com/pdf5.pdf", date:"০২ সেপ্টে, ২০২৫", views:"18.3k"},
+    {id:6, title:"Free Class: Narration - Direct to Indirect (Live Record)", category:"ভিডিও", subject:"Grammar", class:"HSC", desc:"লাইভ ক্লাসের রেকর্ড — বেসিক থেকে এডভান্স, PDF সহ", image:"https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop", pdf:"https://example.com/pdf6.pdf", date:"৩০ আগ, ২০২৫", views:"22k"}
+  ],
+  courses: [
+    {id:1, title:"HSC English Special Crash Course", price:1500, oldPrice:2000, duration:"৩ মাস • ৩৬ ক্লাস", desc:"1st & 2nd Paper সম্পূর্ণ — গ্রামার + রাইটিং + সাজেশন", features:["লাইভ + রেকর্ড","PDF নোটস","সাপ্তাহিক মডেল টেস্ট","WhatsApp সাপোর্ট"], image:"https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop", badge:"বেস্ট সেলার"},
+    {id:2, title:"SSC English A+ Course 2026", price:1200, oldPrice:1600, duration:"৪ মাস • ৪০ ক্লাস", desc:"SSC 2026 ব্যাচের জন্য পরীক্ষামুখী পূর্ণাঙ্গ কোর্স", features:["বেসিক টু এডভান্স","সাজেশন PDF","প্রতিদিন হোমওয়ার্ক"], image:"https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop", badge:"নতুন ব্যাচ"},
+    {id:3, title:"University Admission English", price:2000, oldPrice:2800, duration:"৫ মাস • ৫০ ক্লাস", desc:"DU, JU, CU, GST — Admission English Intensive Care", features:["টপিক ভিত্তিক ক্লাস","প্রশ্ন ব্যাংক","মক টেস্ট"], image:"https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop", badge:"এডমিশন"}
+  ],
+  videos: [
+    {id:1, title:"HSC English 1st Paper | Completing Sentence - সহজ টেকনিক", youtube:"9bZkp7q19f0", duration:"32:15", views:"২৪,৫০০", thumb:"https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg"},
+    {id:2, title:"Right Form of Verb - ১ ক্লাসে শেষ | HSC & SSC", youtube:"kJQP7kiw5Fk", duration:"28:40", views:"১৮,২০০", thumb:"https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg"},
+    {id:3, title:"Narration | Direct - Indirect | Full Concept", youtube:"RgKAFK5djSk", duration:"41:10", views:"৩১,০০০", thumb:"https://i.ytimg.com/vi/RgKAFK5djSk/hqdefault.jpg"},
+    {id:4, title:"Paragraph Writing Format - যেকোনো Paragraph", youtube:"OPf0YbXqDm0", duration:"22:05", views:"১৫,৭০০", thumb:"https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg"},
+    {id:5, title:"SSC Suggestion 2026 | English 2nd Paper", youtube:"YQHsXMglC9A", duration:"18:30", views:"৯,৩০০", thumb:"https://i.ytimg.com/vi/YQHsXMglC9A/hqdefault.jpg"},
+    {id:6, title:"HSC Board Question Solve | With Clues", youtube:"09R8_2nJtjg", duration:"26:55", views:"১১,২০০", thumb:"https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg"}
+  ]
+};
+
+let state = JSON.parse(JSON.stringify(defaultState));
+const saved = localStorage.getItem('ihas_state_v2');
+if(saved){ try{ state = JSON.parse(saved); }catch(e){} }
+function save(){ localStorage.setItem('ihas_state_v2', JSON.stringify(state)); showToast('লাইভ আপডেট সম্পন্ন! ✅'); renderAll(); }
+
+let currentSlide = 0;
+let slideInterval;
+
+function renderHero(){
+  const wrap = document.getElementById('heroSlider');
+  wrap.innerHTML = state.heroSlides.map((s, i)=> `
+    <div class="absolute inset-0 transition-opacity duration-700 ${i===currentSlide?'opacity-100':'opacity-0 pointer-events-none'}">
+      <img src="${s.image}" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-royal-950/90 via-royal-900/70 to-indigo-600/40"></div>
+      <div class="absolute inset-0 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 w-full">
+          <div class="max-w-[640px] text-white">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs font-bold tracking-widest uppercase"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> ${s.badge}</span>
+            <h1 class="text-[34px] md:text-[48px] font-extrabold leading-[1.05] mt-4">${s.title} <span class="text-amber-300">${s.highlight}</span></h1>
+            <p class="text-blue-100 text-[15px] leading-relaxed mt-3 max-w-[560px]">${s.desc}</p>
+            <div class="flex flex-wrap gap-3 mt-6">
+              <a href="#courses" class="px-6 py-3 rounded-full bg-white text-royal-900 font-bold text-sm shadow-lg hover:bg-slate-50 transition flex items-center gap-2">${s.cta} <i class="fa-solid fa-arrow-right text-xs"></i></a>
+              <a href="#posts" class="px-6 py-3 rounded-full glass text-white font-bold text-sm hover:bg-white/20 transition">${s.cta2}</a>
+            </div>
+            <div class="flex items-center gap-4 mt-6 text-xs">
+              <span class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-300"></i> 4.9/5 রেটিং (2.3k)</span>
+              <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-emerald-300"></i> ১০০% ফ্রি কনটেন্ট</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:block absolute right-[6%] top-1/2 -translate-y-1/2 w-[420px]">
+        <div class="bg-white rounded-[24px] p-4 shadow-2xl">
+          <div class="flex items-center gap-3">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" class="w-12 h-12 rounded-full object-cover">
+            <div><p class="font-bold text-sm leading-none">MD Touhidul Hoque Tuhin</p><p class="text-xs text-slate-500">BA (Honours) in English</p></div>
+            <span class="ml-auto px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">Live</span>
+          </div>
+          <div class="mt-4 rounded-2xl overflow-hidden aspect-video bg-slate-100 relative">
+            <img src="${s.image}" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/20 flex items-center justify-center"><div class="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-lg"><i class="fa-solid fa-play text-royal-700 ml-0.5"></i></div></div>
+          </div>
+          <div class="flex gap-2 mt-3 text-xs">
+            <span class="flex-1 py-2 rounded-full bg-slate-900 text-white text-center font-bold"><i class="fa-solid fa-users mr-1"></i> ১৫k+ শিক্ষার্থী</span>
+            <span class="flex-1 py-2 rounded-full bg-amber-400 text-slate-900 text-center font-bold">ফ্রি জয়েন</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  const dots = document.getElementById('sliderDots');
+  dots.innerHTML = state.heroSlides.map((_,i)=> `<button onclick="goSlide(${i})" class="h-2 rounded-full transition-all ${i===currentSlide?'w-8 bg-white':'w-2 bg-white/50'}"></button>`).join('');
+}
+
+function nextSlide(){ currentSlide=(currentSlide+1)%state.heroSlides.length; renderHero(); }
+function prevSlide(){ currentSlide=(currentSlide-1+state.heroSlides.length)%state.heroSlides.length; renderHero(); }
+function goSlide(i){ currentSlide=i; renderHero(); resetInterval(); }
+function resetInterval(){ clearInterval(slideInterval); slideInterval=setInterval(nextSlide,4500); }
+
+function renderPosts(){
+  const q = document.getElementById('postSearch').value.toLowerCase();
+  const activeFilter = document.querySelector('.filterBtn.active')?.dataset.filter || 'all';
+  let list = state.posts.filter(p=>{
+    const matchSearch = !q || (p.title+p.desc+p.subject).toLowerCase().includes(q);
+    const matchFilter = activeFilter==='all' || p.category===activeFilter;
+    return matchSearch && matchFilter;
+  });
+  const grid = document.getElementById('postsGrid');
+  if(list.length===0){ grid.innerHTML=`<div class="col-span-full py-16 text-center bg-white rounded-2xl border"><p class="font-bold text-slate-600">কোনো পোস্ট পাওয়া যায়নি</p><p class="text-sm text-slate-500">অন্য কিওয়ার্ড দিয়ে খুঁজুন</p></div>`; return; }
+  grid.innerHTML = list.map(p=> `
+    <article class="bg-white rounded-[20px] border border-slate-100 shadow-sm overflow-hidden card-hover flex flex-col">
+      <div class="relative h-[190px] overflow-hidden">
+        <img src="${p.image}" class="w-full h-full object-cover">
+        <div class="absolute top-3 left-3 flex gap-2">
+          <span class="px-2.5 py-1 rounded-full bg-white/95 backdrop-blur text-xs font-bold shadow">${p.category}</span>
+          <span class="px-2.5 py-1 rounded-full hero-gradient text-white text-xs font-bold shadow">${p.class}</span>
+        </div>
+        <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
+          <span class="px-2.5 py-1 rounded-full bg-black/45 backdrop-blur border border-white/20 flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> ${p.date}</span>
+          <span class="px-2.5 py-1 rounded-full bg-black/45 backdrop-blur border border-white/20 flex items-center gap-1.5"><i class="fa-regular fa-eye"></i> ${p.views}</span>
+        </div>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <p class="text-xs font-bold tracking-widest text-indigo-600 uppercase">${p.subject} • ${p.category}</p>
+        <h3 class="font-bold text-[16px] leading-snug mt-1 line-clamp-2">${p.title}</h3>
+        <p class="text-sm text-slate-500 mt-2 line-clamp-2">${p.desc}</p>
+        <div class="flex gap-2 mt-4">
+          <a href="${p.pdf}" target="_blank" class="flex-1 py-2.5 rounded-full hero-gradient text-white text-center font-bold text-sm hover:opacity-95 transition flex items-center justify-center gap-1.5"><i class="fa-solid fa-file-arrow-down text-xs"></i> PDF ডাউনলোড</a>
+          <button onclick="sharePost(${p.id})" class="w-11 h-11 rounded-full bg-slate-50 border flex items-center justify-center hover:bg-white transition"><i class="fa-solid fa-share-nodes text-slate-600 text-sm"></i></button>
+        </div>
+      </div>
+    </article>
+  `).join('');
+  document.getElementById('adminPostCount').textContent = state.posts.length;
+  document.getElementById('statPosts').textContent = state.posts.length;
+}
+
+function renderCourses(){
+  const grid = document.getElementById('coursesGrid');
+  grid.innerHTML = state.courses.map(c=> `
+    <div class="bg-white rounded-[22px] border shadow-sm overflow-hidden card-hover flex flex-col">
+      <div class="relative h-[190px] overflow-hidden">
+        <img src="${c.image}" class="w-full h-full object-cover">
+        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-amber-400 text-slate-900 text-xs font-extrabold shadow">${c.badge}</span>
+        <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur text-xs font-bold border">${c.duration}</span>
+      </div>
+      <div class="p-5 flex-1 flex flex-col">
+        <h3 class="font-bold text-[18px] leading-tight">${c.title}</h3>
+        <p class="text-sm text-slate-500 mt-1">${c.desc}</p>
+        <ul class="mt-3 space-y-1.5">
+          ${c.features.map(f=> `<li class="flex items-center gap-2 text-sm"><span class="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-[10px]"><i class="fa-solid fa-check"></i></span> ${f}</li>`).join('')}
+        </ul>
+        <div class="flex items-end gap-2 mt-4">
+          <p class="text-[24px] font-extrabold text-royal-800">৳ ${c.price.toLocaleString('en-BD')}</p>
+          ${c.oldPrice? `<p class="text-sm line-through text-slate-400 mb-1">৳ ${c.oldPrice.toLocaleString('en-BD')}</p><span class="ml-auto px-2 py-1 rounded-full bg-red-50 text-red-600 text-xs font-bold border border-red-200">${Math.round((1-c.price/c.oldPrice)*100)}% ছাড়</span>`:''}
+        </div>
+        <div class="grid grid-cols-2 gap-2 mt-4">
+          <button onclick="openEnroll(${c.id})" class="py-3 rounded-full hero-gradient text-white font-bold text-sm hover:opacity-95 transition">ভর্তি হোন</button>
+          <a href="https://wa.me/8801580370062?text=আসসালামু আলাইকুম, আমি ${encodeURIComponent(c.title)} কোর্সে ভর্তি হতে চাই" target="_blank" class="py-3 rounded-full bg-white border font-bold text-sm text-center hover:bg-slate-50 transition">বিস্তারিত</a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('statCourses').textContent = state.courses.length;
+  // admin list
+  document.getElementById('adminCourseList').innerHTML = state.courses.map(c=> `
+    <div class="bg-white rounded-2xl border p-4">
+      <div class="flex gap-3">
+        <img src="${c.image}" class="w-20 h-20 rounded-xl object-cover border">
+        <div class="flex-1"><p class="font-bold text-sm leading-tight">${c.title}</p><p class="text-xs text-slate-500">${c.duration}</p><p class="font-extrabold text-royal-700 mt-1">৳ ${c.price} ${c.oldPrice? `<span class="text-xs line-through text-slate-400">৳ ${c.oldPrice}</span>`:''}</p></div>
+      </div>
+      <div class="flex gap-2 mt-3">
+        <button onclick="editCourse(${c.id})" class="flex-1 py-2 rounded-full bg-slate-900 text-white text-xs font-bold">এডিট</button>
+        <button onclick="deleteCourse(${c.id})" class="flex-1 py-2 rounded-full bg-red-50 text-red-600 border border-red-200 text-xs font-bold">ডিলিট</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderVideos(){
+  document.getElementById('videoCount').textContent = state.videos.length + 'টি ভিডিও';
+  document.getElementById('statVideos').textContent = state.videos.length;
+  const list = document.getElementById('videoList');
+  list.innerHTML = state.videos.map(v=> `
+    <button onclick="playVideo('${v.youtube}','${encodeURIComponent(v.title)}')" class="w-full flex gap-3 p-2 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-200 text-left transition group">
+      <div class="relative w-[132px] h-[78px] rounded-xl overflow-hidden shrink-0 bg-slate-100">
+        <img src="${v.thumb || 'https://i.ytimg.com/vi/'+v.youtube+'/hqdefault.jpg'}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+        <span class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/80 text-white text-[10px] font-bold">${v.duration}</span>
+        <span class="absolute inset-0 flex items-center justify-center"><span class="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow"><i class="fa-solid fa-play text-[11px] text-royal-700 ml-0.5"></i></span></span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="font-bold text-[13px] leading-snug line-clamp-2">${v.title}</p>
+        <p class="text-xs text-slate-500 mt-1 flex items-center gap-2"><i class="fa-solid fa-eye text-[11px]"></i> ${v.views} • ${v.duration}</p>
+      </div>
+    </button>
+  `).join('');
+  document.getElementById('adminVideoList').innerHTML = state.videos.map(v=> `
+    <div class="bg-white rounded-2xl border p-3 flex gap-3 items-center">
+      <img src="${v.thumb || 'https://i.ytimg.com/vi/'+v.youtube+'/hqdefault.jpg'}" class="w-24 h-16 rounded-xl object-cover border shrink-0">
+      <div class="flex-1 min-w-0"><p class="font-bold text-sm leading-tight line-clamp-1">${v.title}</p><p class="text-xs text-slate-500">ID: ${v.youtube} • ${v.duration} • ${v.views}</p></div>
+      <div class="flex flex-col gap-1 shrink-0">
+        <button onclick="editVideo(${v.id})" class="px-3 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold">এডিট</button>
+        <button onclick="deleteVideo(${v.id})" class="px-3 py-1.5 rounded-full bg-red-50 text-red-600 border border-red-200 text-xs font-bold">ডিলিট</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderAdminHero(){
+  document.getElementById('adminHeroList').innerHTML = state.heroSlides.map(s=> `
+    <div class="bg-white rounded-2xl border p-4">
+      <div class="flex gap-4">
+        <img src="${s.image}" class="w-32 h-20 rounded-xl object-cover border shrink-0">
+        <div class="flex-1 grid md:grid-cols-2 gap-3">
+          <input value="${s.badge}" onchange="updateHero(${s.id},'badge',this.value)" class="px-3 py-2.5 rounded-xl border bg-slate-50 text-sm" placeholder="Badge">
+          <input value="${s.cta}" onchange="updateHero(${s.id},'cta',this.value)" class="px-3 py-2.5 rounded-xl border bg-slate-50 text-sm" placeholder="CTA">
+          <input value="${s.title}" onchange="updateHero(${s.id},'title',this.value)" class="px-3 py-2.5 rounded-xl border bg-slate-50 text-sm font-semibold" placeholder="Title">
+          <input value="${s.highlight}" onchange="updateHero(${s.id},'highlight',this.value)" class="px-3 py-2.5 rounded-xl border bg-slate-50 text-sm" placeholder="Highlight">
+          <input value="${s.image}" onchange="updateHero(${s.id},'image',this.value)" class="md:col-span-2 px-3 py-2.5 rounded-xl border bg-slate-50 text-sm" placeholder="Image URL">
+          <textarea onchange="updateHero(${s.id},'desc',this.value)" rows="2" class="md:col-span-2 px-3 py-2.5 rounded-xl border bg-slate-50 text-sm" placeholder="Description">${s.desc}</textarea>
+        </div>
+      </div>
+      <div class="flex justify-end mt-3">
+        <button onclick="deleteSlide(${s.id})" class="px-4 py-1.5 rounded-full bg-red-50 text-red-600 border border-red-200 text-xs font-bold">স্লাইড ডিলিট</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderAdminPosts(){
+  document.getElementById('adminPostList').innerHTML = state.posts.map(p=> `
+    <div class="p-4 flex gap-3 items-center">
+      <img src="${p.image}" class="w-16 h-16 rounded-xl object-cover border shrink-0">
+      <div class="flex-1 min-w-0"><p class="font-bold text-sm leading-tight truncate">${p.title}</p><p class="text-xs text-slate-500">${p.category} • ${p.class} • <a href="${p.pdf}" target="_blank" class="text-royal-600 underline">PDF</a></p></div>
+      <div class="flex gap-2 shrink-0">
+        <button onclick="editPost(${p.id})" class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center"><i class="fa-solid fa-pen text-xs"></i></button>
+        <button onclick="deletePost(${p.id})" class="w-8 h-8 rounded-full bg-red-50 text-red-600 border border-red-200 flex items-center justify-center"><i class="fa-solid fa-trash text-xs"></i></button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateContactDisplay(){
+  document.querySelectorAll('.contactNumber').forEach(el=> el.textContent = state.contact);
+  document.querySelectorAll('.courseContact').forEach(el=> el.textContent = state.contact);
+  document.getElementById('topContact').textContent = state.contact;
+  const num = state.contact.replace(/[^0-9]/g,'');
+  document.getElementById('floatingWA').href = 'https://wa.me/'+num;
+  document.getElementById('whatsappNav').href = 'https://wa.me/'+num;
+}
+
+function renderAll(){
+  renderHero(); renderPosts(); renderCourses(); renderVideos(); renderAdminHero(); renderAdminPosts(); updateContactDisplay();
+  document.getElementById('settingPhone').value = state.contact;
+  document.getElementById('settingEmail').value = state.email;
+  document.getElementById('settingYoutube').value = state.youtube;
+}
+
+// Actions
+function playVideo(id, title){
+  document.getElementById('mainVideo').src = 'https://www.youtube.com/embed/'+id+'?autoplay=1';
+  if(title) document.getElementById('videoTitle').textContent = decodeURIComponent(title);
+}
+function sharePost(id){
+  const p = state.posts.find(x=>x.id===id);
+  if(navigator.share){ navigator.share({title:p.title, text:p.desc, url:p.pdf}); }
+  else { navigator.clipboard.writeText(p.pdf); showToast('PDF লিংক কপি হয়েছে!'); }
+}
+function openEnroll(id){
+  const c = state.courses.find(x=>x.id===id);
+  document.getElementById('enrollTitle').textContent = c.title;
+  document.getElementById('enrollPrice').textContent = '৳ '+c.price.toLocaleString('en-BD');
+  document.getElementById('enrollModal').classList.remove('hidden');
+}
+function showToast(msg){ document.getElementById('toastMsg').textContent=msg; const t=document.getElementById('toast'); t.classList.remove('hidden'); setTimeout(()=>t.classList.add('hidden'),2500); }
+
+// Admin auth
+let isAdmin=false;
+const ADMIN_EMAIL="tuhintouhidulhoque@gmail.com";
+const ADMIN_PASS="13837901SKTTS";
+
+function openLogin(){ document.getElementById('loginModal').classList.remove('hidden'); }
+function closeLogin(){ document.getElementById('loginModal').classList.add('hidden'); }
+function openAdmin(){ document.getElementById('adminDashboard').classList.remove('hidden'); document.body.style.overflow='hidden'; }
+function closeAdmin(){ document.getElementById('adminDashboard').classList.add('hidden'); document.body.style.overflow=''; }
+function switchAdminTab(tab){
+  document.querySelectorAll('.adminTab').forEach(b=>{ b.classList.remove('active','bg-royal-700','text-white'); b.classList.add('hover:bg-slate-50'); if(b.dataset.tab===tab){ b.classList.add('active','bg-royal-700','text-white'); b.classList.remove('hover:bg-slate-50'); }});
+  document.querySelectorAll('.adminTabContent').forEach(c=>c.classList.add('hidden'));
+  document.getElementById('tab-'+tab).classList.remove('hidden');
+}
+function updateAdminBtn(){ document.getElementById('adminBtnText').textContent = isAdmin?'ড্যাশবোর্ড':'এডমিন'; }
+
+// Hero admin
+function updateHero(id, key, val){ const s=state.heroSlides.find(x=>x.id===id); s[key]=val; save(); }
+function deleteSlide(id){ if(!confirm('এই স্লাইড ডিলিট করবেন?')) return; state.heroSlides=state.heroSlides.filter(x=>x.id!==id); if(currentSlide>=state.heroSlides.length) currentSlide=0; save(); }
+document.getElementById('addSlideBtn').addEventListener('click',()=>{ const nid=Date.now(); state.heroSlides.push({id:nid,badge:"নতুন ব্যাচ",title:"নতুন স্লাইড",highlight:"হাইলাইট",desc:"বিবরণ লিখুন",cta:"বাটন",cta2:"আরো দেখুন",image:"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=700&fit=crop"}); save(); });
+
+// Posts admin
+function editPost(id){ const p=state.posts.find(x=>x.id===id); document.getElementById('postId').value=p.id; document.getElementById('postTitle').value=p.title; document.getElementById('postCategory').value=p.category; document.getElementById('postSubject').value=p.subject; document.getElementById('postClass').value=p.class; document.getElementById('postImage').value=p.image; document.getElementById('postPdf').value=p.pdf; document.getElementById('postDesc').value=p.desc; switchAdminTab('posts'); window.scrollTo(0,0); }
+function deletePost(id){ if(!confirm('পোস্ট ডিলিট করবেন?')) return; state.posts=state.posts.filter(x=>x.id!==id); save(); }
+document.getElementById('postForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const id = document.getElementById('postId').value;
+  const data = {
+    title: document.getElementById('postTitle').value,
+    category: document.getElementById('postCategory').value,
+    subject: document.getElementById('postSubject').value || 'General',
+    class: document.getElementById('postClass').value || 'HSC',
+    image: document.getElementById('postImage').value || 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop',
+    pdf: document.getElementById('postPdf').value || 'https://example.com/sample.pdf',
+    desc: document.getElementById('postDesc').value || '',
+    date: new Date().toLocaleDateString('bn-BD', {day:'2-digit', month:'short', year:'numeric'}),
+    views: '0'
+  };
+  if(id){ const idx=state.posts.findIndex(x=>x.id==id); state.posts[idx]={...state.posts[idx], ...data}; }
+  else { state.posts.unshift({id:Date.now(), ...data}); }
+  e.target.reset(); document.getElementById('postId').value=''; save();
+});
+document.getElementById('postReset').addEventListener('click',()=>{ document.getElementById('postForm').reset(); document.getElementById('postId').value=''; });
+
+// Courses admin
+function editCourse(id){ const c=state.courses.find(x=>x.id===id); document.getElementById('courseId').value=c.id; document.getElementById('courseTitle').value=c.title; document.getElementById('coursePrice').value=c.price; document.getElementById('courseOldPrice').value=c.oldPrice||''; document.getElementById('courseDuration').value=c.duration; document.getElementById('courseImage').value=c.image; document.getElementById('courseFeatures').value=c.features.join(', '); document.getElementById('courseDesc').value=c.desc; switchAdminTab('courses'); }
+function deleteCourse(id){ if(!confirm('কোর্স ডিলিট করবেন?')) return; state.courses=state.courses.filter(x=>x.id!==id); save(); }
+document.getElementById('courseForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const id=document.getElementById('courseId').value;
+  const data={
+    title:document.getElementById('courseTitle').value,
+    price: parseInt(document.getElementById('coursePrice').value)||0,
+    oldPrice: parseInt(document.getElementById('courseOldPrice').value)||null,
+    duration: document.getElementById('courseDuration').value||'৩ মাস',
+    image: document.getElementById('courseImage').value||'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop',
+    features: document.getElementById('courseFeatures').value.split(',').map(s=>s.trim()).filter(Boolean),
+    desc: document.getElementById('courseDesc').value||'',
+    badge: 'আপডেটেড'
+  };
+  if(id){ const idx=state.courses.findIndex(x=>x.id==id); state.courses[idx]={...state.courses[idx],...data}; }
+  else { state.courses.push({id:Date.now(), ...data}); }
+  e.target.reset(); document.getElementById('courseId').value=''; save();
+});
+document.getElementById('courseReset').addEventListener('click',()=>{ document.getElementById('courseForm').reset(); document.getElementById('courseId').value=''; });
+
+// Videos admin
+function editVideo(id){ const v=state.videos.find(x=>x.id===id); document.getElementById('videoId').value=v.id; document.getElementById('videoTitleInput').value=v.title; document.getElementById('videoYoutube').value=v.youtube; document.getElementById('videoDuration').value=v.duration; document.getElementById('videoViews').value=v.views; document.getElementById('videoThumb').value=v.thumb||''; switchAdminTab('videos'); }
+function deleteVideo(id){ if(!confirm('ভিডিও ডিলিট করবেন?')) return; state.videos=state.videos.filter(x=>x.id!==id); save(); }
+document.getElementById('videoForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const id=document.getElementById('videoId').value;
+  let yt=document.getElementById('videoYoutube').value.trim();
+  // extract ID if full URL
+  const m = yt.match(/(?:v=|youtu\.be\/|embed\/)([a-zA-Z0-9_-]{11})/);
+  if(m) yt=m[1];
+  if(yt.length>20 && yt.includes('/')) yt=yt.split('/').pop().split('?')[0];
+  const data={
+    title: document.getElementById('videoTitleInput').value,
+    youtube: yt,
+    duration: document.getElementById('videoDuration').value||'00:00',
+    views: document.getElementById('videoViews').value||'0',
+    thumb: document.getElementById('videoThumb').value||'https://i.ytimg.com/vi/'+yt+'/hqdefault.jpg'
+  };
+  if(id){ const idx=state.videos.findIndex(x=>x.id==id); state.videos[idx]={...state.videos[idx],...data}; }
+  else { state.videos.unshift({id:Date.now(), ...data}); }
+  e.target.reset(); document.getElementById('videoId').value=''; save();
+});
+document.getElementById('videoReset').addEventListener('click',()=>{ document.getElementById('videoForm').reset(); document.getElementById('videoId').value=''; });
+
+// Settings
+document.getElementById('saveSettings').addEventListener('click',()=>{
+  state.contact=document.getElementById('settingPhone').value||state.contact;
+  state.email=document.getElementById('settingEmail').value||state.email;
+  state.youtube=document.getElementById('settingYoutube').value||state.youtube;
+  save(); showToast('সেটিংস লাইভ আপডেট হয়েছে!');
+});
+document.getElementById('resetAll').addEventListener('click',()=>{
+  if(!confirm('সব ডেটা রিসেট করবেন?')) return;
+  localStorage.removeItem('ihas_state_v2');
+  state=JSON.parse(JSON.stringify(defaultState));
+  save(); location.reload();
+});
+
+// Events
+document.getElementById('adminBtn').addEventListener('click',()=>{ if(isAdmin) openAdmin(); else openLogin(); });
+document.getElementById('closeLogin').addEventListener('click', closeLogin);
+document.getElementById('loginBackdrop').addEventListener('click', closeLogin);
+document.getElementById('adminBackdrop').addEventListener('click', closeAdmin);
+document.getElementById('closeAdmin').addEventListener('click', closeAdmin);
+document.getElementById('adminLogout').addEventListener('click',()=>{ isAdmin=false; updateAdminBtn(); closeAdmin(); showToast('লগআউট সম্পন্ন'); });
+document.getElementById('togglePass').addEventListener('click',()=>{
+  const inp=document.getElementById('loginPass');
+  const icon=document.querySelector('#togglePass i');
+  if(inp.type==='password'){ inp.type='text'; icon.classList.replace('fa-eye','fa-eye-slash'); } else { inp.type='password'; icon.classList.replace('fa-eye-slash','fa-eye'); }
+});
+document.getElementById('loginForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const em=document.getElementById('loginEmail').value.trim();
+  const pw=document.getElementById('loginPass').value.trim();
+  if(em===ADMIN_EMAIL && pw===ADMIN_PASS){ isAdmin=true; updateAdminBtn(); closeLogin(); openAdmin(); showToast('এডমিন লগইন সফল!'); }
+  else { const err=document.getElementById('loginError'); err.textContent='ইমেইল বা পাসওয়ার্ড ভুল!'; err.classList.remove('hidden'); }
+});
+document.querySelectorAll('.adminTab').forEach(b=> b.addEventListener('click',()=> switchAdminTab(b.dataset.tab)));
+document.getElementById('prevSlide').addEventListener('click',()=>{prevSlide(); resetInterval();});
+document.getElementById('nextSlide').addEventListener('click',()=>{nextSlide(); resetInterval();});
+document.getElementById('postSearch').addEventListener('input', renderPosts);
+document.querySelectorAll('.filterBtn').forEach(btn=> btn.addEventListener('click',()=>{
+  document.querySelectorAll('.filterBtn').forEach(b=>{ b.classList.remove('active','bg-royal-700','text-white'); b.classList.add('bg-slate-100'); });
+  btn.classList.add('active','bg-royal-700','text-white'); btn.classList.remove('bg-slate-100');
+  renderPosts();
+}));
+document.getElementById('mobileMenuBtn').addEventListener('click',()=> document.getElementById('mobileMenu').classList.toggle('hidden'));
+document.getElementById('copyVideoLink').addEventListener('click',()=>{
+  const src=document.getElementById('mainVideo').src;
+  navigator.clipboard.writeText(src); showToast('ভিডিও লিংক কপি হয়েছে!');
+});
+document.getElementById('contactForm').addEventListener('submit',e=>{ e.preventDefault(); showToast('বার্তা পাঠানো হয়েছে! শীঘ্রই যোগাযোগ করা হবে।'); e.target.reset(); });
+document.getElementById('enrollForm').addEventListener('submit',e=>{ e.preventDefault(); showToast('ভর্তি রিকোয়েস্ট পাঠানো হয়েছে! WhatsApp চেক করুন।'); document.getElementById('enrollModal').classList.add('hidden'); e.target.reset(); });
+document.getElementById('closeEnroll').addEventListener('click',()=> document.getElementById('enrollModal').classList.add('hidden'));
+document.getElementById('enrollBackdrop').addEventListener('click',()=> document.getElementById('enrollModal').classList.add('hidden'));
+
+// Init
+renderAll();
+resetInterval();
+window.goSlide=goSlide;
+window.playVideo=playVideo;
+window.sharePost=sharePost;
+window.openEnroll=openEnroll;
+window.editPost=editPost;
+window.deletePost=deletePost;
+window.editCourse=editCourse;
+window.deleteCourse=deleteCourse;
+window.editVideo=editVideo;
+window.deleteVideo=deleteVideo;
+window.updateHero=updateHero;
+window.deleteSlide=deleteSlide;
+window.switchAdminTab=switchAdminTab;
+</script>
+</body>
+</html>
